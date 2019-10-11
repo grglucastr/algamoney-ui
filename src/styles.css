@@ -24,6 +24,11 @@ label{
   text-align: center;
 }
 
+.col-acoes{
+  display: flex;
+  justify-content: space-around;
+}
+
 @media(min-width: 1200px){
   .container{
     width: 1170px;
