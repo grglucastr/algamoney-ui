@@ -9,6 +9,21 @@ label{
   font-weight: bold;
 }
 
+.col-valor-header {
+  width: 120px;
+}
+.col-valor-content {
+  text-align: right;
+}
+
+.col-data-header {
+  width: 120px;
+}
+
+.col-data-content {
+  text-align: center;
+}
+
 @media(min-width: 1200px){
   .container{
     width: 1170px;
