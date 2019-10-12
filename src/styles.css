@@ -24,9 +24,18 @@ label{
   text-align: center;
 }
 
+.col-acoes-header{
+  width: 90px;
+}
+
 .col-acoes{
   display: flex;
   justify-content: space-around;
+
+}
+
+body .ui-table .ui-table-tbody > tr > td {
+  padding: 2px !important;
 }
 
 @media(min-width: 1200px){
