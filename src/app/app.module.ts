@@ -8,6 +8,7 @@ import { TableModule } from 'primeng/components/table/table';
 import {TooltipModule} from 'primeng/components/tooltip/tooltip';
 import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     LancamentosPesquisaComponent,
     NavbarComponent,
+    PessoasPesquisaComponent,
   ],
   imports: [
     BrowserModule,
