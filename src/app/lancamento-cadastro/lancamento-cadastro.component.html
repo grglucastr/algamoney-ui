@@ -14,6 +14,7 @@
       <div class="ui-g-6 ui-md-3 ui-fluid">
         <label>Vencimento</label>
         <p-calendar
+          required
           dateFormat="dd/mm/yy"
           [readonlyInput]="true"
           [showIcon]="true"></p-calendar>
@@ -27,39 +28,31 @@
         <input pInputText type="text" name="descricao"
           ngModel #descricao="ngModel" required minlength="10" >
 
-        <div
-          *ngIf="descricao.hasError('required') && descricao.dirty"
-          class="ui-messages ui-messages-error">
-          Informe uma descrição
-        </div>
-
-        <div
-          *ngIf="descricao.hasError('minlength') && descricao.dirty"
-          class="ui-messages ui-messages-error">
-          Mínimo de {{ descricao.errors.minlength.requiredLength }} caracteres.
-        </div>
+          <app-message [control]="descricao" error="required" text="Informe uma descricao." ></app-message>
+          <app-message [control]="descricao" error="minlength" text="Mínimo de {{ descricao?.errors?.minlength?.requiredLength }} caracteres." ></app-message>
 
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Valor</label>
         <input
           type="text" placeholder="0,00" currencyMask
-          name="valor" ngModel #valor="ngModel"
+          name="valor" ngModel #valor="ngModel" required
           [options]="{ prefix: '', thousands:'.', decimal:',', allowNegative:false }">
       </div>
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Categoria</label>
-        <p-dropdown [options]="categorias"></p-dropdown>
+        <p-dropdown [options]="categorias" required></p-dropdown>
       </div>
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Pessoa</label>
-        <p-dropdown [options]="pessoas" [filter]="true" #pessoa ></p-dropdown>
+        <p-dropdown [options]="pessoas" [filter]="true" #pessoa required></p-dropdown>
       </div>
       <div class="ui-g-12 ui-fluid">
         <label>Observação</label>
         <textarea pInputTextarea rows="3"></textarea>
       </div>
       <div class="ui-g-12">
+        <!-- TODO: Disable this button when form is invalid -->
         <button pButton type="submit" label="Salvar"></button>
         <button pButton type="button" label="Novo" class="ui-button-info"></button>
         <a href="javascript:;">Voltar para a pesquisa</a>
