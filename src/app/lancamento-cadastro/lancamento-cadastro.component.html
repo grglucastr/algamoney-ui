@@ -38,14 +38,23 @@
           type="text" placeholder="0,00" currencyMask
           name="valor" ngModel #valor="ngModel" required
           [options]="{ prefix: '', thousands:'.', decimal:',', allowNegative:false }">
+
+        <app-message [control]="valor" error="required" text="Informe um valor válido."></app-message>
+
       </div>
       <div class="ui-g-12 ui-md-6 ui-fluid">
-        <label>Categoria</label>
-        <p-dropdown [options]="categorias" required></p-dropdown>
+        <label for="categoria">Categoria</label>
+        <p-dropdown
+          [options]="categorias" id="categoria" name="categoria"
+          ngModel #categoria="ngModel" required></p-dropdown>
+        <app-message [control]="categoria" error="required" text="Selecione uma categoria válida." ></app-message>
       </div>
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Pessoa</label>
-        <p-dropdown [options]="pessoas" [filter]="true" #pessoa required></p-dropdown>
+        <p-dropdown [options]="pessoas" [filter]="true"  id="pessoa" name="pessoa"
+        ngModel #pessoa="ngModel" required></p-dropdown>
+
+        <app-message [control]="pessoa" error="required" text="Selecione uma pessoa válida."></app-message>
       </div>
       <div class="ui-g-12 ui-fluid">
         <label>Observação</label>
