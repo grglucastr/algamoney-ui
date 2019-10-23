@@ -23,6 +23,7 @@ import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.co
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 import { MessageComponent } from './message/message.component';
+import { PessoaListagemComponent } from './pessoa-listagem/pessoa-listagem.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MessageComponent } from './message/message.component';
     LancamentoCadastroComponent,
     PessoaCadastroComponent,
     MessageComponent,
+    PessoaListagemComponent,
   ],
   imports: [
     BrowserModule,
