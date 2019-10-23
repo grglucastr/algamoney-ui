@@ -24,6 +24,7 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 import { MessageComponent } from './message/message.component';
 import { PessoaListagemComponent } from './pessoa-listagem/pessoa-listagem.component';
+import { LancamentoListagemComponent } from './lancamento-listagem/lancamento-listagem.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { PessoaListagemComponent } from './pessoa-listagem/pessoa-listagem.compo
     PessoaCadastroComponent,
     MessageComponent,
     PessoaListagemComponent,
+    LancamentoListagemComponent,
   ],
   imports: [
     BrowserModule,
