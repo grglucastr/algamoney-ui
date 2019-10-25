@@ -17,6 +17,7 @@ import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton
 import { LancamentoListagemComponent } from './lancamento-listagem/lancamento-listagem.component';
 import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -40,7 +41,7 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
     InputMaskModule,
     CurrencyMaskModule,
     FormsModule,
-
+    SharedModule,
     CommonModule
   ],
   exports: [

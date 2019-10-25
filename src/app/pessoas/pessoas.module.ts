@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TooltipModule } from 'primeng/components/tooltip/tooltip';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
@@ -28,6 +29,7 @@ import { CommonModule } from '@angular/common';
     InputTextModule,
     TooltipModule,
     BrowserAnimationsModule,
+    SharedModule
   ],
   exports: [
     PessoaCadastroComponent,
