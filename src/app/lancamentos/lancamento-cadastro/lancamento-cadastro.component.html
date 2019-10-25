@@ -28,9 +28,10 @@
         <input pInputText type="text" name="descricao"
           ngModel #descricao="ngModel" required minlength="10" >
 
+          <!--
           <app-message [control]="descricao" error="required" text="Informe uma descricao." ></app-message>
           <app-message [control]="descricao" error="minlength" text="Mínimo de {{ descricao?.errors?.minlength?.requiredLength }} caracteres." ></app-message>
-
+          -->
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Valor</label>
@@ -39,7 +40,9 @@
           name="valor" ngModel #valor="ngModel" required
           [options]="{ prefix: '', thousands:'.', decimal:',', allowNegative:false }">
 
-        <app-message [control]="valor" error="required" text="Informe um valor válido."></app-message>
+          <!--
+          <app-message [control]="valor" error="required" text="Informe um valor válido."></app-message>
+          -->
 
       </div>
       <div class="ui-g-12 ui-md-6 ui-fluid">
@@ -47,14 +50,21 @@
         <p-dropdown
           [options]="categorias" id="categoria" name="categoria"
           ngModel #categoria="ngModel" required></p-dropdown>
+
+          <!--
         <app-message [control]="categoria" error="required" text="Selecione uma categoria válida." ></app-message>
+        -->
+
       </div>
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Pessoa</label>
         <p-dropdown [options]="pessoas" [filter]="true"  id="pessoa" name="pessoa"
         ngModel #pessoa="ngModel" required></p-dropdown>
 
+        <!--
         <app-message [control]="pessoa" error="required" text="Selecione uma pessoa válida."></app-message>
+        -->
+
       </div>
       <div class="ui-g-12 ui-fluid">
         <label>Observação</label>
